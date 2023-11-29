@@ -1,0 +1,5 @@
+CREATE FUNCTION func_minimum(VARIADIC list NUMERIC[])
+RETURNS NUMERIC AS
+    $$
+    SELECT MIN(arg) FROM UNNEST(list) G(arg)
+    $$ LANGUAGE sql

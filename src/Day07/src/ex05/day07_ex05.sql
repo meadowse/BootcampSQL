@@ -1,0 +1,1 @@
+SELECT name FROM person NATURAL JOIN person_order ORDER BY name
